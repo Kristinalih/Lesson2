@@ -5,7 +5,7 @@ total = 0
 loop do
   puts "Введите название товара или напишите стоп, чтобы посмотреть свои покупки."
   name = gets.chomp.to_s
-break if name == "стоп"
+  break if name == "стоп"
 
   puts "Введите цену за единицу товара:"
   cost = gets.chomp.to_f
@@ -13,9 +13,9 @@ break if name == "стоп"
   puts "Введите количество купленного товара:"
   quantity = gets.chomp.to_f
 
-cart[name] = {cost => quantity}
-total_item[name] = cost * quantity
-total += cost * quantity
+  cart[name] = {cost => quantity}
+  total_item[name] = cost * quantity
+  total += cost * quantity
 end
 
 total_item.each do |product, total_cost|

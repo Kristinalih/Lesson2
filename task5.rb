@@ -7,11 +7,10 @@ month = gets.chomp.to_i
 puts "Введите год:"
 year = gets.chomp.to_i
 
+quantity_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 if year % 4 == 0 && year % 100 != 0 || year % 400 == 0
- quantity_months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-else
-  quantity_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] 
+  quantity_months[1] = 29
 end
 
 index = 0

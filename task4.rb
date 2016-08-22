@@ -1,6 +1,6 @@
-arr = ('a'..'z').to_a
+arr = ('a'..'z')
 eng_vowels = ["a", "e", "o", "i", "u"]
-vowels = Hash.new(0)
+vowels = {}
 
 
 arr.each_with_index do |letter, index|
